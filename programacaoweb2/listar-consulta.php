@@ -1,3 +1,4 @@
+</br></br></br>
 <h1>Listar Consulta</h1>
 <?php
 include 'E:\Xampp\htdocs\Exo-Pets\programacaoweb2\config.php';# - pc casa
@@ -45,3 +46,4 @@ else{
 	}	
 
 ?>
+</div>

@@ -4,6 +4,7 @@ include 'E:\Xampp\htdocs\Exo-Pets\programacaoweb2\config.php';# - pc casa
 switch (@$_REQUEST['acao']) {
 	case 'cadastrar':
 		$pet = $_POST['pet_id_pet'];
+		$tutor = $_POST['tutor_id_tutor'];
 		$veterinario = $_POST['veterinario_id_veterinario'];
 		$data = $_POST['data_consulta'];
 		$hora = $_POST['hora_consulta'];
@@ -11,12 +12,14 @@ switch (@$_REQUEST['acao']) {
 		
 		$sql = "INSERT INTO consulta (
 			pet_id_pet,
+			tutor_id_tutor,
 			veterinario_id_veterinario,
 			data_consulta, 
 			hora_consulta, 
 			descricao_consulta) 
 		VALUES (
 			'{$pet}',
+			'{$tutor}',
 			'{$veterinario}',
 			'{$data}',
 			'{$hora}',

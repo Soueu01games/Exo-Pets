@@ -1,5 +1,6 @@
+</br></br></br>
 <h1>Cadastrar Veterinário</h1>
-<form action="?page=salvar-veterinario" method="POST">
+<form action="?page=salvar-veterinario" method="POST" >
 	<input type="hidden" name="acao" value="cadastrar">
 	<div class="mb-3">
 		<label>Nome do Veterinário</label>

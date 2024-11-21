@@ -1,3 +1,4 @@
+</br></br></br>
 <h1>Cadastrar Tutor</h1>
 <form action="?page=salvar-tutor" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">

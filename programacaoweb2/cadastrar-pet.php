@@ -1,3 +1,4 @@
+</br></br></br>
 <h1>Cadastrar PET</h1>
 <form action="?page=salvar-pet" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">

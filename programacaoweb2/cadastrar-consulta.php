@@ -1,3 +1,4 @@
+</br></br></br>
 <h1>Cadastrar Consulta</h1>
 <form action="?page=salvar-consulta" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">
@@ -56,4 +57,7 @@
 	<div class="mb-3">
 		<button type="submit" class="btn btn-success">Salvar</button>
 	</div>
+	
 </form>
+
+<div>
