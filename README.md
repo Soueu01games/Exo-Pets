@@ -63,4 +63,7 @@ Eu pretendo adicionar o CSS de um projeto do 1° semestre (uma página Index de 
 Seria legal criar uma função de login mas acho que não conseguiria fazer . Seria bom se eu conseguisse impedir de um veterinário ter 2 consultas no mesmo horário, mas não faço ideia 
 de como implementaria. Acho que o que dá pra fazer é tornar algumas informações obrigatórias de preencher como o Tutor na hora de cadastrar pet e etc.
 
+<br>Atualização 1:</b></br>
+Unifiquei os projetos adicionando o CSS e arrumando onde precisava do html. Falta arrumar o enquadramento do site e tornar obrigatório o uso das chaves estrangeiras no cadastro.
+
 Última Atualização- 21/11/2024
