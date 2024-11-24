@@ -3,12 +3,29 @@ include 'E:\Xampp\htdocs\Exo-Pets\programacaoweb2\config.php';# - pc casa
 #include 'C:\xampp\htdocs\Emanuela\Projeto\config.php';# - pc faculdade
 switch (@$_REQUEST['acao']) {
 	case 'cadastrar':
-		$nome = $_POST['nome_tutor'];
-		$cpf = $_POST['cpf_tutor'];
-		$fone = $_POST['fone_tutor'];
+		$nome = isset($_POST['nome_tutor']) ? trim($_POST['nome_tutor']) : '';
+		$cpf = isset($_POST['cpf_tutor']) ? trim($_POST['cpf_tutor']) : '';
+		$fone = isset($_POST['fone_tutor']) ? trim($_POST['fone_tutor']) : '';
 		$email = $_POST['email_tutor'];
-		$endereco = $_POST['endereco_tutor'];
-		
+        $endereco = $_POST['endereco_tutor'];
+
+if (empty($nome)) {
+            echo "<script>alert('Erro: O campo Nome é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
+        if (empty($cpf)) {
+            echo "<script>alert('Erro: O campo Cpf é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
+        if (empty($fone)) {
+            echo "<script>alert('Erro: O campo Telefone é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
+
+
 		$sql = "INSERT INTO tutor (
 			nome_tutor, 
 			cpf_tutor,  

@@ -3,12 +3,35 @@ include 'E:\Xampp\htdocs\Exo-Pets\programacaoweb2\config.php';# - pc casa
 #include 'C:\xampp\htdocs\Emanuela\Projeto\config.php';# - pc faculdade
 switch (@$_REQUEST['acao']) {
 	case 'cadastrar':
-		$pet = $_POST['pet_id_pet'];
+		$pet = isset($_POST['pet_id_pet']) ? $_POST['pet_id_pet'] : '';
 		$tutor = $_POST['tutor_id_tutor'];
-		$veterinario = $_POST['veterinario_id_veterinario'];
-		$data = $_POST['data_consulta'];
-		$hora = $_POST['hora_consulta'];
-		$descricao = $_POST['descricao_consulta'];
+		$veterinario = isset($_POST['veterinario_id_veterinario']) ? $_POST['veterinario_id_veterinario'] : '';
+		$data = isset($_POST['data_consulta']) ? $_POST['data_consulta'] : '';
+		$hora = isset($_POST['hora_consulta']) ? $_POST['hora_consulta'] : '';
+		$descricao = isset($_POST['descricao_consulta']) ? $_POST['descricao_consulta'] : '';
+
+ 		// Verificar campos obrigatórios
+        if (empty($pet) || $pet === "-= Escolha um PET =-") {
+    echo "<script>alert('Erro: O campo Pet é obrigatório.'); history.back();</script>";
+    exit;
+}
+if (empty($veterinario) || $veterinario === "-= Escolha um Veterinário =-") {
+    echo "<script>alert('Erro: O campo Veterinário é obrigatório.'); history.back();</script>";
+    exit;
+}
+        if (empty($data)) {
+            echo "<script>alert('Erro: O campo Data é obrigatório.'); history.back();</script>";
+            exit;
+        }
+        if (empty($hora)) {
+            echo "<script>alert('Erro: O campo Hora é obrigatório.'); history.back();</script>";
+            exit;
+        }
+        if (empty($descricao)) {
+            echo "<script>alert('Erro: O campo Descrição é obrigatório.'); history.back();</script>";
+            exit;
+        }
+		
 		
 		$sql = "INSERT INTO consulta (
 			pet_id_pet,

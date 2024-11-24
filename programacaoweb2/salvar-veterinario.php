@@ -3,9 +3,26 @@ include 'E:\Xampp\htdocs\Exo-Pets\programacaoweb2\config.php';# - pc casa
 #include 'C:\xampp\htdocs\Emanuela\Projeto\config.php';# - pc faculdade
 switch (@$_REQUEST['acao']) {
 	case 'cadastrar':
-		$nome = $_POST['nome_veterinario'];
-		$crmv = $_POST['crmv_veterinario'];
-		$especialidade = $_POST['especialidade_veterinario'];
+		$nome = isset($_POST['nome_veterinario']) ? trim($_POST['nome_veterinario']) : '';
+		$crmv = isset($_POST['crmv_veterinario']) ? trim($_POST['crmv_veterinario']) : '';
+		$especialidade = isset($_POST['especialidade_veterinario']) ? trim($_POST['especialidade_veterinario']) : '';
+
+// Verificar campos obrigatórios
+        if (empty($nome)) {
+            echo "<script>alert('Erro: O campo Nome é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
+        if (empty($crmv)) {
+            echo "<script>alert('Erro: O campo CRMV é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
+        if (empty($especialidade)) {
+            echo "<script>alert('Erro: O campo Especialidade é obrigatório.'); history.back();</script>";
+            exit;
+        }
+
 		$sql = "INSERT INTO veterinario (
 			nome_veterinario, 
 			crmv_veterinario, 
