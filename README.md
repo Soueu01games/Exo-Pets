@@ -66,4 +66,7 @@ de como implementaria. Acho que o que dá pra fazer é tornar algumas informaç�
 <br>Atualização 1:</b></br>
 Unifiquei os projetos adicionando o CSS e arrumando onde precisava do html. Falta arrumar o enquadramento do site e tornar obrigatório o uso das chaves estrangeiras no cadastro.
 
-Última Atualização- 21/11/2024
+<b>Atualização 2:</b></br>
+Ainda não consegui ajustar o CSS e desisti já que esse não é o foco do projeto. Tornei campos obrigatórios no Cadastro, por exemplo, é obrigatório o Nome do Tutor para cadastrar o tutor, e o obrigatório ter um Pet para cadastrar uma consulta. Isso foi feito adicionando javascript no cadastro e usando o IF como tratamento de exceções na página de salvar. Acho que poderia ter tornado obrigatório também na parte de editar pois ainda é possível apagar as informações mas assim já tá bom. Adicionei um botão que leva para o cadastro na página de Listar e arrumei uns detalhes alí e aqui. Acho que essa é a atualização final do projeto.
+
+Última Atualização- 24/11/2024
