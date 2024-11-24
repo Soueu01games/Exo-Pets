@@ -12,7 +12,9 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 
 if($qtd > 0){
-	print"<p>Encontrou <b>$qtd</b> resultado(s).</p>";
+	
+print"<p>Encontrou <b>$qtd</b> resultado(s). <button class='btn btn-primary'onclick=\"location.href='?page=cadastrar-pet';\">Cadastrar novo PET</button></p>";
+
 	print"<table class='table table-bordered table-striped table-hover'>";
 	print"<tr>";
 	print"<th>#</th>";
@@ -35,6 +37,7 @@ if($qtd > 0){
 		print "<td>
 			<button class='btn btn-success'onclick=\"location.href='?page=editar-pet&id_pet=".$row->id_pet."';\">Editar</button>
 			<button class='btn btn-danger'onclick=\"if(confirm('Tem certeza que quer excluir?')){location.href='?page=salvar-pet&acao=excluir&id_pet=".$row->id_pet."';}else{false;}\">Excluir</button>
+
 			  </td>";
 		print"</tr>";
 	}
@@ -42,6 +45,7 @@ if($qtd > 0){
 	}
 else{
 	print"<p>Não foram encontrados <b>$qtd</b> resultado(s).</p>";
+	
 	}	
-
+	
 ?>

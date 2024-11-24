@@ -8,16 +8,19 @@ $sql = "SELECT * FROM consulta AS c
 		ON v.id_veterinario = c.veterinario_id_veterinario
 		INNER JOIN pet AS p
 		ON p.id_pet = c.pet_id_pet
+		INNER JOIN tutor AS t
+		ON t.id_tutor = p.tutor_id_tutor 
 ";
 $res = $conn->query($sql);
 $qtd = $res->num_rows;
 
 if($qtd > 0){
-	print"<p>Encontrou <b>$qtd</b> resultado(s)</p>";
+	print"<p>Encontrou <b>$qtd</b> resultado(s). <button class='btn btn-primary'onclick=\"location.href='?page=cadastrar-consulta';\">Cadastrar nova Consulta</button></p>";
 	print"<table class='table table-bordered table-striped table-hover'>";
 	print"<tr>";
 	print"<th>#</th>";
 	print"<th>Pet</th>";
+	print"<th>Tutor</th>";
 	print"<th>Veterinário</th>";
 	print"<th>Data</th>";
 	print"<th>Hora</th>";
@@ -28,7 +31,8 @@ if($qtd > 0){
 	while($row=$res->fetch_object()){
 		print"<tr>";
 		print "<td>".$count++."</td>";
-		print "<td>".$row->nome_pet."</td>";;
+		print "<td>".$row->nome_pet."</td>";
+		print "<td>".$row->nome_tutor."</td>";
 		print "<td>".$row->nome_veterinario."</td>";
 		print "<td>".$row->data_consulta."</td>";
 		print "<td>".$row->hora_consulta."</td>";

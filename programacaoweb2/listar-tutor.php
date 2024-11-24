@@ -8,7 +8,7 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 
 if($qtd > 0){
-	print"<p>Encontrou <b>$qtd</b> resultado(s).</p>";
+	print"<p>Encontrou <b>$qtd</b> resultado(s). <button class='btn btn-primary'onclick=\"location.href='?page=cadastrar-tutor';\">Cadastrar novo Tutor</button></p>";
 	print"<table class='table table-bordered table-striped table-hover'>";
 	print"<tr>";
 	print"<th>#</th>";
