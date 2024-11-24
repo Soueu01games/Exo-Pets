@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="?page=index#services">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="?page=index#portfolio">Portfólio</a></li>
                     <li class="nav-item"><a class="nav-link" href="?page=index#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="?page=index#team">Time</a></li>
+                    
                 </ul>
             </div>
             </div>

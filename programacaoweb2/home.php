@@ -44,7 +44,7 @@
                                 <img class="img-fluid" src="assets/img/portfolio/tutor.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Donos de Pet</div>
+                                <div class="portfolio-caption-heading">Tutores dos Pets</div>
                                 <div class="portfolio-caption-subheading text-muted"> 
                                     <a class="btn btn-primary btn-xs text-uppercase" href="?page=listar-tutor" role="button">=Listar=</a> 
                                     <a class="btn btn-primary btn-xs text-uppercase" href="?page=cadastrar-tutor" role="button">=Cadastrar=</a>
