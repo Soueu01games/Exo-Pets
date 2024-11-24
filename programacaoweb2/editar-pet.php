@@ -32,7 +32,8 @@ $row= $res->fetch_object();
 					print "<option>Não há Tutores</option>";
 				}
 			?>
-		</select>	
+		</select>
+	</div>	
 	<div class="mb-3">
 		<label>Nome do PET</label>
 		<input type="text" name="nome_pet" class="form-control" value="<?php print $row->nome_pet;?>">
